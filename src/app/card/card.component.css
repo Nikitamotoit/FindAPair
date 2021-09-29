@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.card {
+  width: 120px;
+  height: 160px;
+  border: 2px solid #72c;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  transition: transform 1s;
+  transform: rotateY(180deg);
+  position: relative;
+}
+.card img {
+  position: absolute;
+  width: 90%;
+  transition: transform 1s;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.card img:last-child {
+  transform: rotateY(180deg);
+}
+.card img:first-child {
+  transform: rotateY(0deg);
+}
+.card.active {
+  transform: rotateY(0deg);
+}
+.card.active img:last-child {
+  transform: rotateY(0deg);
+}
+.card.active img:first-child {
+  transform: rotateY(180deg);
+}
