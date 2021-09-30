@@ -1,5 +1,4 @@
-<div class="container">
-  <div class="card">
-    <img src="../../images/card1.svg" alt="myImage">
-  </div>
-</div>
+<button class="card" [ngClass]="image.btnClick" (click)="BtnOnClick()">
+  <img src="/assets/images/card1.svg">
+  <img [src]="image.srcImages">
+</button>
